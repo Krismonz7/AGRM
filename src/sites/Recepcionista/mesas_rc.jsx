@@ -8,8 +8,8 @@ export const Mesas_rc = () => {
             <img src={imgmesa} alt="" className="mesa"/>
 
             <div className="title">Reserva : 7 a.m - 2 p.m a 4 p.m</div>
-            <button className="editar"> Editar</button>
-            <button className="cancelar">Cancelar</button>
+            <button className="editar"> Editar reserva</button>
+            <button className="cancelar"> Cancelar </button>
         </div>
     
         <div className="nav_foot">
