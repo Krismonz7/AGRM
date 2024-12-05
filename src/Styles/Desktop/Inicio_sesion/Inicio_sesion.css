@@ -17,12 +17,13 @@
   font-family: "Monserrat", Italy;
 }
 .inicio .header {
-  width: 90%;
+  width: 100%;
   height: 10vh;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border: 1px solid #eee;
 }
 .inicio .header .volver {
   width: 5%;
@@ -130,7 +131,7 @@
 }
 .inicio .sesion .enlace {
   margin-left: 5%;
-  width: 40%;
+  width: 45%;
   height: 10%;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -139,4 +140,4 @@
   border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-/*# sourceMappingURL=inicio.css.map */
+/*# sourceMappingURL=Inicio_sesion.css.map */

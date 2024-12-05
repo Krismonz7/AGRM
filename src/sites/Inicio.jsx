@@ -5,11 +5,31 @@ import twitter from '../assets/twitter.png'
 import Logo from '../assets/logo.png'
 import Camarones from '../assets/comida/camaron.jpg'
 import '../Styles/Desktop/principal/Inicio.css'
+import { useNavigate } from 'react-router-dom'
+
+
 
 export const Inicio = () => {
+    const navigate = useNavigate();
+    const goToRegistro = () => {
+        navigate("registro"); // Navega relativo a la ruta actual
+      };
+      const goToInicioSesion = () => {
+        navigate("inicio_sesion"); // Navega relativo a la ruta actual
+      };
+
+      const goToInstagram = () => {
+        window.location.href = "https://www.instagram.com/real_smoke_el_ahumadero/?__d=11";
+      };
+      const goToFacebook = () => {
+        window.location.href = "https://www.facebook.com/elahumaderocolima/?locale=es_LA";
+      };
+      const goToTwitter = () => {
+        window.location.href = "https://x.com/smokebbquk";
+      };
   return (
     <div className='Container'>
-        <div className="Header">
+        <div className="Header_i">
             <div className="Logo">
                 <img src={Logo} alt="" />
             </div>
@@ -17,9 +37,9 @@ export const Inicio = () => {
                 BBQ EL REAL 🔥
             </div>
             <div className="Nav">
-                <a href="" className="item">Register</a>
-                <a href="" className="item">Login</a>
-                <a href="" className="item">Information</a>
+                <a href="" className="item" onClick={goToRegistro}>Register</a>
+                <a href="" className="item" onClick={goToInicioSesion}>Login</a>
+                <a href="https://www.facebook.com/elahumaderocolima/?locale=es_LA" className="item" >Information</a>
             </div>
         </div>
 
@@ -35,7 +55,7 @@ export const Inicio = () => {
                     voluptatem minus facere amet 
                     libero illo dolorem earum, expedita modi fugit labore dicta eum exercitationem laborum unde.
                 </p>
-                <button className="Register">
+                <button className="Register" onClick={goToRegistro}>
                     Registrate :D
                 </button>
             </div>
@@ -51,9 +71,9 @@ export const Inicio = () => {
             </div>
             <div className="Social">
                 <p>Sigenos en redes</p>
-                <img src={twitter} alt="" className="item" />
-                <img src={instagram} alt="" className="item" />
-                <img src={facebook} alt="" className="item" />
+                <img src={twitter} alt="" className="item" onClick={goToTwitter}/>
+                <img src={instagram} alt="" className="item" onClick={goToInstagram}/>
+                <img src={facebook} alt="" className="item"  onClick={goToFacebook}/>
             </div>
         </div>
 
