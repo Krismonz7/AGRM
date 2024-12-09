@@ -22,16 +22,18 @@ $azul_claro_rc: rgba(0, 194, 255, 1);
 $azul_oscuro_rc: rgba(1, 0, 50, 1);
 $purpura: hsl(241, 72%, 65%);
 
-.ejemplo{
+.editar_perfil_u{
     //Width correcto sin labarra de desplazamiento de la pagina
     //:D
     width: calc(100vw - 17px);
+    min-height: 100vh;
     font-family: "Inter", sans-serif;
     //Para centrar cosas en un body
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
+    background: linear-gradient($gris,$oscuro);
 
     
 

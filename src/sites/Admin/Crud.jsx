@@ -5,7 +5,7 @@ import usuario from '../../assets/Iconos_perfil/usuario.png'
 import admin from '../../assets/Iconos_perfil/admin.png'
 import mesa from '../../assets/Iconos_perfil/mesa.png'
 import '../../Styles/Desktop/administrador/estilos_admin/Crud/Crud.css'
-export const Curd = () => {
+export const Crud = () => {
   return (
     <div className="container">
         <Volver/>        

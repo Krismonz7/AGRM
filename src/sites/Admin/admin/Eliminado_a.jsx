@@ -2,7 +2,7 @@ import { Volver } from "../../../components/Volver"
 import '../../../Styles/Desktop/administrador/estilos_admin/Eliminado/Eliminado.css'
 import admin from '../../../assets/Iconos_perfil/admin.png'
 
-export const Eliminado = () => {
+export const Eliminado_a = () => {
   
   return (
     <div className="container">

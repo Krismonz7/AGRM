@@ -1,2 +1,4 @@
 agradecimientos de iconos:
 <a href="https://www.flaticon.es/iconos-gratis/apoyo" title="apoyo iconos">Apoyo iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/lapiz" title="lapiz iconos">Lapiz iconos creados por RIkas Dzihab - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/salida" title="salida iconos">Salida iconos creados por Freepik - Flaticon</a>
