@@ -21,8 +21,10 @@ $azul_claro_rc: rgba(0, 194, 255, 1);
 $azul_oscuro_rc: rgba(1, 0, 50, 1);
     //Inicio sesion
     .inicio{
-        width: 100vw;
-        height: 100vh;
+        width: calc(100vw - 17px);
+        font-family: "Inter", sans-serif;
+        height: auto;
+        min-height: 100vh;
     
         background: linear-gradient($gris,$oscuro);
         display: flex;
@@ -104,7 +106,7 @@ $azul_oscuro_rc: rgba(1, 0, 50, 1);
             text-align: center;
             width: 40%;
             height: auto;
-            margin: auto;
+            margin: 10vh auto;
             border-radius: 15px;
             background: linear-gradient($rojo_claro,$rojo_oscuro);
             

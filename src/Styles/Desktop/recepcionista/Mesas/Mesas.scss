@@ -30,7 +30,7 @@ $azul_oscuro: rgba(1, 0, 50, 1);
   }
   
 
-.Mesas{
+.mesas_recepcion{
     
     width: 100vw;
     height: auto;
@@ -213,9 +213,10 @@ $azul_oscuro: rgba(1, 0, 50, 1);
                 border-top: 1px solid #eee;
             }
             //Boton
-            .Reserva{
+            .Reserva_btn{
                 width: 80%;
                 height: 15%;
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 background: $naranja_llama;

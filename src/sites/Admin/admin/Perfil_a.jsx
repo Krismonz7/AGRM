@@ -1,11 +1,23 @@
 import { Volver } from "../../../components/Volver"
 import '../../../Styles/Desktop/administrador/estilos_admin/Perfil_m/Perfil_a.css'
 import admin from '../../../assets/Iconos_perfil/admin.png'
+import { useNavigate } from "react-router-dom"
+
 
 export const Perfil_a = () => {
+    const navigate = useNavigate();
+
+    const goToEditar = () =>{
+        navigate("/admin/admins/editar_a");
+    };
+
+    const goToCancelar = () =>{
+        navigate("/admin/admins/admin_menu_a");
+    };
+
   return (
     <div className="container">
-        <Volver/>
+        <Volver ruta={"/admin/admins/admin_menu_a"}/>
 
         <div className="body">
 
@@ -21,8 +33,8 @@ export const Perfil_a = () => {
                     <p>Contraseña: </p>
                 </div>
             </div>
-            <a href="#" className="boton">Editar</a>
-            <a href="#" className="boton_r">Eliminar</a>
+            <a href="#" className="boton" onClick={goToEditar}>Editar</a>
+            <a href="#" className="boton_r" onClick={goToCancelar} >Cancelar</a>
         </div>
     </div>
   )

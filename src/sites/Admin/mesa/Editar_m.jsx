@@ -1,11 +1,22 @@
 import { Volver } from "../../../components/Volver"
 import '../../../Styles/Desktop/administrador/estilos_mesa/Editar_m/Editar_m.css'
 import mesa from '../../../assets/Iconos_perfil/mesa.png'
+import { useNavigate } from "react-router-dom"
 
 export const Editar_m = () => {
+
+    const navigate = useNavigate();
+    const goToActualizar = () =>{
+        navigate("/admin/mesas/actualizado_m")
+    }
+
+    const goToEliminar = () =>{
+        navigate("/admin/mesas/eliminado_m")
+    }
+
   return (
     <div className="container">
-        <Volver/>
+        <Volver ruta="/admin/mesas/admin_menu_m"/>
 
         <div className="body">
 
@@ -21,8 +32,8 @@ export const Editar_m = () => {
                     <input type="number" placeholder="Sillas"/>
                 </div>
             </div>
-            <a href="#" className="boton">Actualizar</a>
-            <a href="#" className="boton_r">Eliminar</a>
+            <a href="#" className="boton" onClick={goToActualizar}>Actualizar</a>
+            <a href="#" className="boton_r" onClick={goToEliminar}>Eliminar</a>
         </div>
     </div>
   )

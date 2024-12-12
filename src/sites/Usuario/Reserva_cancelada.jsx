@@ -7,7 +7,7 @@ export const Reserva_cancelada = () => {
   return (
     <div className="reserva_cancelada">
 
-        <Volver/>
+        <Volver ruta={"/usuario/mesas_reserva"}/>
 
         <div className="body">
             <div className="primero">

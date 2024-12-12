@@ -1,11 +1,22 @@
 import { Volver } from "../../../components/Volver"
 import '../../../Styles/Desktop/administrador/estilos_admin/Editar_a/Editar_a.css'
 import admin from '../../../assets/Iconos_perfil/admin.png'
+import { useNavigate } from "react-router-dom"
 
 export const Editar_a = () => {
+
+    const navigate=  useNavigate();
+
+    const goToEliminar = () =>{
+        navigate("/admin/admins/eliminado_a")
+    }
+
+    const goToActualizar = () =>{
+        navigate("/admin/admins/actualizado_a")
+    } 
   return (
     <div className="container">
-        <Volver/>
+        <Volver ruta={"/admin/admins/admin_menu_a"}/>
 
         <div className="body">
 
@@ -25,8 +36,8 @@ export const Editar_a = () => {
                     <input type="password" placeholder="contrasena"/>
                 </div>
             </div>
-            <a href="#" className="boton">Actualizar</a>
-            <a href="#" className="boton_r">Eliminar</a>
+            <a href="#" className="boton" onClick={goToActualizar}>Actualizar</a>
+            <a href="#" className="boton_r" onClick={goToEliminar}>Eliminar</a>
         </div>
     </div>
   )

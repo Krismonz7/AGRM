@@ -1,12 +1,18 @@
 import logo from "../assets/logo.png"
 import '../Styles/Desktop/Registro/Registro.css'
 import { Volver } from "../components/Volver"
+import { useNavigate } from "react-router-dom"
 
 
 export const Registro = () => {
+  const navigate = useNavigate();
+  const goToRegistroExitoso = () =>{
+    navigate("")
+  }
+
   return (
     <div className = "inicio">
-        <Volver/>
+        <Volver ruta={"/"}/>
 
         
         <form className="sesion">
@@ -17,12 +23,15 @@ export const Registro = () => {
           <p>Correo:</p>
           <input type="text" placeholder="correo" id="correo"/>
 
+          <p>CC:</p>
+          <input type="number" placeholder="cc" id="cc"/>
+
           <p>Contraseña:</p>
           <input type="text" placeholder="contrasena" id="contrasena"/>
 
           
           <button type="submit">
-            Ingresar
+            Registrarse
           </button>
           
         </form>

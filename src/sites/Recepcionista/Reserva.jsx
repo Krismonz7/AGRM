@@ -2,12 +2,21 @@
 import {Volver} from "../../components/Volver.jsx"
 import foto_mesa from '../../assets/fondo_mesa.png'
 import '../../Styles/Desktop/recepcionista/Reserva/Reserva.css'
+import { useNavigate } from "react-router-dom"
 
 export const Reserva = () => {
+    const navigate = useNavigate();
+    const goToLiberar = () =>{
+        navigate("/recepcionista/mesas")
+    };
+    const goToConfirmar = () =>{
+        navigate("/recepcionista/mesas/reserva_confirmada")
+    }
+
   return (
     <div className="Reserva">
 
-        <Volver/>
+        <Volver ruta={"/recepcionista/mesas"}/>
 
         <div className="body">
             
@@ -36,8 +45,8 @@ export const Reserva = () => {
 
             <div className="imagen">
                 <img src={foto_mesa} alt="" />
-                <button className="confirmar">Confirmar</button>
-                <button className="liberar">Liberar</button>
+                <button className="confirmar" onClick={goToConfirmar}>Confirmar</button>
+                <button className="liberar" onClick={goToLiberar}>Liberar</button>
             </div>
 
             

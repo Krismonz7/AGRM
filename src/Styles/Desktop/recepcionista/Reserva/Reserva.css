@@ -51,7 +51,7 @@
   font-size: larger;
 }
 .Reserva .body .header .numero_mesa {
-  width: 10%;
+  width: 20%;
   height: 90%;
   display: flex;
   flex-direction: row;
@@ -63,7 +63,6 @@
 .Reserva .body .plazas {
   width: 45%;
   height: auto;
-  border: 1px solid #eee;
   margin: 10vh auto;
   display: flex;
   flex-direction: row;
@@ -109,9 +108,8 @@
   color: rgb(255, 0, 0);
 }
 .Reserva .body .imagen {
-  width: 45%;
+  width: 50%;
   height: 90vh;
-  border: 1px solid #eee;
   margin: 10vh auto;
   display: flex;
   justify-content: space-between;
@@ -120,7 +118,7 @@
   flex-wrap: wrap;
 }
 .Reserva .body .imagen img {
-  width: 90%;
+  width: 100%;
   height: 70%;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;

@@ -1,4 +1,5 @@
 import { PropTypes } from "prop-types";
+
 export const Reserva = ({imagen,dia,mesa,hora1,hora2}) => {
   return (
     <div className="target">

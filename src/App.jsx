@@ -9,16 +9,7 @@ import { Inicio_sesion } from "./sites/Inicio_sesion"
 import { Registro } from "./sites/Registro"
 import { Recuperar_c } from "./sites/Recuperar_c"
 import { Recuperar_e } from "./sites/Recuperar_e"
-//import { Notificaciones } from "./sites/Notificaciones"
 
-
-
-
-//Recepcionista
-//import { Mesas } from "./sites/Recepcionista/Mesas"
-//import { Ultima_hora } from "./sites/Recepcionista/Ultima_hora"
-//import { Reserva } from "./sites/Recepcionista/Reserva"
-//import { Reserva_u } from "./sites/Recepcionista/Reserva_u"
 
 
 //ADMIN
@@ -74,7 +65,13 @@ import { Editar_datos_perfil } from "./sites/Admin/Editar_datos_perfil";
 import { Alerta_exito } from "./sites/Admin/Alerta_exito";
 
 
-//Area de los usuarios
+
+
+//USUARIOS
+
+//Usuario Navigate
+import { Notificaciones_u } from "./sites/Usuario/Notificaciones_u";
+//Reservas
 import { Home_u } from "./sites/Usuario/Home_u";
 import { Mesas_reserva } from "./sites/Usuario/Mesas_reserva";
 import { Reserva_u } from "./sites/Usuario/Reserva_u";
@@ -82,7 +79,52 @@ import { Cambio_reserva } from "./sites/Usuario/Cambio_reserva";
 import { Error_reserva } from "./sites/Usuario/Error_reserva";
 import { Reserva_cancelada } from "./sites/Usuario/Reserva_cancelada";
 import { Mesas_dispoibles } from "./sites/Usuario/Mesas_dispoibles";
-import { Editar_perfil_u } from "./sites/Usuario/Editar_perfil_u";
+import { Ajustes_u } from "./sites/Usuario/Ajustes_u";
+import { Cuenta_u } from "./sites/Usuario/Cuenta_u";
+import { Ajustes_exito } from "./sites/Usuario/Ajustes_exito";
+import { Reserva_exitosa } from "./sites/Usuario/Reserva_exitosa";
+import { Penalizacion } from "./sites/Usuario/Penalizacion";
+import { No_disponibles } from "./sites/Usuario/No_disponibles";
+
+
+
+
+/* RECEPCIONISTA */
+//Navegacion recepcionista
+import { Inicio_rc } from "./sites/Recepcionista/inicio_rc";
+import { Ajustes_r } from "./sites/Recepcionista/Ajustes_r";
+
+
+import { Mesas } from "./sites/Recepcionista/Mesas"
+//import { Ultima_hora } from "./sites/Recepcionista/Ultima_hora"
+import { Notificaciones_r } from "./sites/Recepcionista/Notificaciones_r";
+import { Reserva } from "./sites/Recepcionista/Reserva"
+import { Reserva_confirmada } from "./sites/Recepcionista/Reserva_confirmada";
+import { Ultima_hora } from "./sites/Recepcionista/Ultima_hora";
+import { Reserva_ultima } from "./sites/Recepcionista/Reserva_ultima";
+import { Cuenta_r } from "./sites/Recepcionista/Cuenta_r";
+import { Ajustes_exito_r } from "./sites/Recepcionista/Ajustes_exito_r";
+
+
+
+
+
+/* GERENTE */
+import { Inicio_g } from "./sites/Gerente/Inicio_g";
+import { Notificaciones_g } from "./sites/Gerente/Notificaciones_g";
+import { Configuraciones_g } from "./sites/Gerente/Configuraciones_g";
+import { Cuenta_g } from "./sites/Gerente/Cuenta_g";
+import { Ajustes_exito_g } from "./sites/Gerente/Ajustes_exito_g";
+import { Pago_almacenamiento } from "./sites/Gerente/Pago_almacenamiento";
+import { Menu_reportes } from "./sites/Gerente/Menu_reportes";
+
+/*Reporte de mesas */
+import { Reportes_m } from "./sites/Gerente/Reportes_m";
+import { Reporte_enviado } from "./sites/Gerente/Reporte_enviado";
+
+
+
+/* Cosas nav */
 
 
 
@@ -110,6 +152,15 @@ function App() {
 
         <Route path="/admin/curd" element={<Crud/>} />
 
+        {/* Crud clientes */}
+        <Route path="/admin/usuarios/admin_menu_u" element={<Admin_menu_u/>}/>
+        <Route path="/admin/usuarios/perfil_u" element={<Perfil_u/>}/>
+        <Route path="/admin/usuarios/editar_u" element={<Editar_u/>}/>
+        <Route path="/admin/usuarios/actualizado_u" element={<Actualizado_u/>}/>
+        <Route path="/admin/usuarios/credenciales_u" element={<Credenciales_u/>}/>
+        <Route path="/admin/usuarios/eliminado_u" element={<Eliminado_u/>}/>
+
+
         {/* Crud admins */ }
 
         <Route path="/admin/admins/actualizado_a" element={<Actualizado_a/>}/>
@@ -121,19 +172,12 @@ function App() {
 
 
         {/* Crud de mesas */}
-        <Route path="/admin/mesas/actualizado" element={<Actualizado_m/>}/>
+        <Route path="/admin/mesas/actualizado_m" element={<Actualizado_m/>}/>
         <Route path="/admin/mesas/admin_menu_m" element={<Admin_menu_m/>}/>
         <Route path="/admin/mesas/editar_m" element={<Editar_m/>}/>
         <Route path="/admin/mesas/eliminado_m" element={<Eliminado_m/>}/>
         <Route path="/admin/mesas/perfil_m" element={<Perfil_m/>}/>
 
-        {/* Crud clientes */}
-        <Route path="/admin/usuarios/admin_menu_u" element={<Admin_menu_u/>}/>
-        <Route path="/admin/usuarios/perfil_u" element={<Perfil_u/>}/>
-        <Route path="/admin/usuarios/editar_u" element={<Editar_u/>}/>
-        <Route path="/admin/usuarios/actualizado_u" element={<Actualizado_u/>}/>
-        <Route path="/admin/usuarios/credenciales_u" element={<Credenciales_u/>}/>
-        <Route path="/admin/usuarios/eliminado_u" element={<Eliminado_u/>}/>
 
 
         {/* Crud Recepcionista */}
@@ -155,18 +199,88 @@ function App() {
 
 
 
+
+
         {/* Usuarios Paths */}
 
+        {/*--- Nav Usuario */}
         <Route path="/usuario/home_u" element={<Home_u/>}/>
+
+        <Route path="/usuario/notificaciones_u" element={<Notificaciones_u/>}/>
+
+        <Route path="/usuario/ajustes_u" element={<Ajustes_u/>}/>
+
+
+        {/*--- Reservas usuario */}
         <Route path="/usuario/mesas_reserva" element={<Mesas_reserva/>}/>
+        <Route path="/usuario/mesas_dispoibles" element={<Mesas_dispoibles/>}/>
         <Route path="/usuario/reserva_u" element={<Reserva_u/>}/>
         <Route path="/usuario/cambio_reserva" element={<Cambio_reserva/>}/>
+        <Route path="/usuario/no_disponibles" element={<No_disponibles/>}/>
+        <Route path="/usuario/cambio_reserva/reserva_exitosa" element={<Reserva_exitosa/>}/>
+
         <Route path="/usuario/error_reserva" element={<Error_reserva/>}/>
         <Route path="/usuario/reserva_cancelada" element={<Reserva_cancelada/>}/>
-        <Route path="/usuario/mesas_dispoibles" element={<Mesas_dispoibles/>}/>
-        <Route path="/usuario/editar_perfil_u" element={<Editar_perfil_u/>}/>
+        <Route path="/usuario/penalizacion" element={<Penalizacion/>}/>
+
+        {/*--- Ajustes de perfil de usuario */}
+        <Route path="/usuario/ajustes_u" element={<Ajustes_u/>}/>
+        <Route path="/usuario/ajustes_u/cuenta_u" element={<Cuenta_u/>}/>
+        <Route path="/usuario/ajustes_u/cuenta_u/ajustes_exito" element={<Ajustes_exito/>}/>
 
 
+
+
+
+
+
+
+
+
+
+
+        {/* Recepcionista paths */}
+        {/* Navegacion reepcionista */}
+        <Route path="/recepcionista/inicio_rc" element={<Inicio_rc/>}/>
+        <Route path="/recepcionista/ajustes_r" element={<Ajustes_r/>}/>
+        <Route path="/recepcionista/notificaciones_r" element={<Notificaciones_r/>}/>
+
+        {/* Centa recepcionista */}
+        <Route path="/recepcionista/ajustes_r/cuenta_r" element={<Cuenta_r/>}/>
+        <Route path="/recepcionista/ajustes_r/cuenta_r/ajustes_exito_r" element={<Ajustes_exito_r/>}/>
+
+        {/* Reservas Recepcionista */}
+        <Route path="/recepcionista/mesas" element={<Mesas/>}/>
+        <Route path="/recepcionista/mesas/reserva" element={<Reserva/>}/>
+        <Route path="/recepcionista/mesas/reserva_confirmada" element={<Reserva_confirmada/>}/>
+
+        <Route path="/recepcionista/mesas/ultima_hora" element={<Ultima_hora/>}/>
+        <Route path="/recepcionista/mesas/ultima_hora/reserva_ultima" element={<Reserva_ultima/>}/>
+
+
+
+
+
+
+
+
+
+
+        {/* GERENTE paths */}
+        <Route path="/gerente/inicio_g" element={<Inicio_g/>}/> 
+        <Route path="/gerente/configuraciones_g" element={<Configuraciones_g/>}/>
+        <Route path="/gerente/notificaciones_g" element={<Notificaciones_g/>}/>
+
+        {/* GERENTE - Configuarcion perfil */}
+
+        <Route path="/gerente/configuraciones_g/cuenta_g" element={<Cuenta_g/>}/>
+        <Route path="/gerente/configuraciones_g/cuenta_g/ajustes_exito_g" element={<Ajustes_exito_g/>}/>
+        <Route path="/gerente/configuraciones_g/pago_almacenamiento" element={<Pago_almacenamiento/>}/>
+        <Route path="/gerente/inicio_g/menu_reportes" element={<Menu_reportes/>}/>
+        <Route path="/gerente/inicio_g/menu_reportes/reporte_m" element={<Reportes_m/>}/>
+        <Route path="/gerente/inicio_g/menu_reportes/reporte_m/reporte_enviado" element={<Reporte_enviado/>}/>
+
+        {/* Gerente- Pantallas navegacion */}
 
 
       </Routes>

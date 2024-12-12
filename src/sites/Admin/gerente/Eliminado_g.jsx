@@ -6,7 +6,7 @@ export const Eliminado_g = () => {
   
   return (
     <div className="container">
-        <Volver />
+        <Volver ruta={"/admin/gerente/admin_menu_g"}/>
 
         <div className="body">
 

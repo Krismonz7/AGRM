@@ -14,7 +14,7 @@
   font-weight: 400; /* O ajusta según las variantes disponibles */
   font-style: normal;
 }
-.Mesas {
+.mesas_recepcion {
   width: 100vw;
   height: auto;
   display: flex;
@@ -24,7 +24,7 @@
   opacity: 1;
   font-family: "Inter", sans-serif;
 }
-.Mesas .Navbar {
+.mesas_recepcion .Navbar {
   display: flex;
   flex-direction: row;
   height: 15vh;
@@ -34,7 +34,7 @@
   text-align: center;
   border-bottom-right-radius: 20px;
 }
-.Mesas .Navbar .item {
+.mesas_recepcion .Navbar .item {
   width: 33%;
   height: 100%;
   margin: auto;
@@ -47,30 +47,30 @@
   border-bottom-left-radius: 20px;
   transition: background-color 1s, color 1s;
 }
-.Mesas .Navbar .item img {
+.mesas_recepcion .Navbar .item img {
   width: 40%;
   height: 60%;
   filter: invert(1);
   margin: auto;
 }
-.Mesas .Navbar .item p {
+.mesas_recepcion .Navbar .item p {
   font-size: 11px;
   color: rgb(255, 255, 255);
   width: 80%;
   height: 10%;
   margin: auto;
 }
-.Mesas .Navbar .item:hover {
+.mesas_recepcion .Navbar .item:hover {
   background: rgba(255, 255, 255, 0.896);
   color: rgb(36, 36, 36);
 }
-.Mesas .Navbar .item:hover img {
+.mesas_recepcion .Navbar .item:hover img {
   filter: none;
 }
-.Mesas .Navbar .item:hover p {
+.mesas_recepcion .Navbar .item:hover p {
   color: rgb(36, 36, 36);
 }
-.Mesas .titulo {
+.mesas_recepcion .titulo {
   border-bottom: 2px solid #eee;
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -83,7 +83,7 @@
   align-items: center;
   justify-content: center;
 }
-.Mesas .Header {
+.mesas_recepcion .Header {
   display: flex;
   flex-direction: row;
   width: 70%;
@@ -94,13 +94,13 @@
   border-radius: 15px;
   background: rgb(1, 0, 50);
 }
-.Mesas .Header .imagen {
+.mesas_recepcion .Header .imagen {
   width: 8%;
   height: 80%;
   filter: invert(1);
   margin: auto;
 }
-.Mesas .Header .Fecha {
+.mesas_recepcion .Header .Fecha {
   width: 80%;
   height: 90%;
   display: flex;
@@ -118,13 +118,13 @@
   border-top: none;
   font-size: 40px;
 }
-.Mesas .Header .Fecha::placeholder {
+.mesas_recepcion .Header .Fecha::placeholder {
   color: #eee;
 }
-.Mesas .Header .Fecha::-webkit-calendar-picker-indicator {
+.mesas_recepcion .Header .Fecha::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
-.Mesas .libres {
+.mesas_recepcion .libres {
   color: white;
   height: 15vh;
   width: 10%;
@@ -139,7 +139,7 @@
   border-style: none;
   text-decoration: none;
 }
-.Mesas .Seccion_mesas {
+.mesas_recepcion .Seccion_mesas {
   width: 95vw;
   height: auto;
   margin: auto;
@@ -149,7 +149,7 @@
   border-top: 2px solid white;
   border-bottom: 2px solid #eee;
 }
-.Mesas .Seccion_mesas .Tarjeta {
+.mesas_recepcion .Seccion_mesas .Tarjeta {
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -160,19 +160,19 @@
   align-items: center;
   border-bottom: 1px solid #eee;
 }
-.Mesas .Seccion_mesas .Tarjeta .Imagen {
+.mesas_recepcion .Seccion_mesas .Tarjeta .Imagen {
   width: 90%;
   height: 50%;
   border-radius: 15px;
   margin: auto;
   overflow: hidden;
 }
-.Mesas .Seccion_mesas .Tarjeta .Imagen img {
+.mesas_recepcion .Seccion_mesas .Tarjeta .Imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.Mesas .Seccion_mesas .Tarjeta .Nombre {
+.mesas_recepcion .Seccion_mesas .Tarjeta .Nombre {
   width: 90%;
   height: 10%;
   justify-content: center;
@@ -182,9 +182,10 @@
   overflow: hidden;
   border-top: 1px solid #eee;
 }
-.Mesas .Seccion_mesas .Tarjeta .Reserva {
+.mesas_recepcion .Seccion_mesas .Tarjeta .Reserva_btn {
   width: 80%;
   height: 15%;
+  display: flex;
   justify-content: center;
   align-items: center;
   background: rgb(255, 92, 0);

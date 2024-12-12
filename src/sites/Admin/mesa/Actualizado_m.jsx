@@ -5,7 +5,7 @@ import mesa from '../../../assets/Iconos_perfil/mesa.png'
 export const Actualizado_m = () => {
   return (
     <div className="container">
-        <Volver />
+        <Volver ruta="/admin/mesas/admin_menu_m"/>
 
         <div className="body">
 
@@ -16,7 +16,7 @@ export const Actualizado_m = () => {
                     con exito!</p>
                 </div>
             </div>
-            <a href="#" className="boton">Enviar credenciales</a>
+            
         </div>
     </div>
   )

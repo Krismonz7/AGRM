@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import image from "../assets/mesa.jpg"
-export const Tarjeta_ultima = (props) => {
+export const Tarjeta_ultima = ({reserva,minutos,horas,}) => {
+    const navigate = useNavigate();
+
+    const goToReserva = () => {
+        navigate(reserva)
+    }
      return (
     <div className="Tarjeta">
         <div className="Imagen">
@@ -8,9 +14,9 @@ export const Tarjeta_ultima = (props) => {
         <p className="Nombre">
             Mesa #1
             <br />
-            Disponible por {props.minutos} minutos rango de hora: {props.horas}
+            Disponible por {minutos} minutos rango de hora: {horas}
         </p>
-        <button className="Reserva">
+        <button className="Reserva_ultima" onClick={goToReserva}>
             ! Ir a reservar ¡
         </button>
     </div>)

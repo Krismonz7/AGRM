@@ -5,7 +5,7 @@ export const Alerta_exito = () => {
     
   return (
     <div className="editar_perfil">
-        <Volver/>
+        <Volver ruta={"/admin/editar_perfil"}/>
         <div className="body">
             <div className="target">
 

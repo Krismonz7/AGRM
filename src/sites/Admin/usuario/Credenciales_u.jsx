@@ -5,7 +5,7 @@ import usuario from '../../../assets/Iconos_perfil/usuario.png'
 export const Credenciales_u = () => {
   return (
     <div className="container">
-        <Volver />
+        <Volver ruta="/admin/usuarios/admin_menu_u"/>
 
         <div className="body">
 

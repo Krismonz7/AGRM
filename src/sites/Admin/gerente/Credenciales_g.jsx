@@ -5,7 +5,7 @@ import gerente from '../../../assets/Iconos_perfil/gerente.png'
 export const Credenciales_g = () => {
   return (
     <div className="container">
-        <Volver />
+        <Volver ruta={"/admin/gerente/admin_menu_g"}/>
 
         <div className="body">
 

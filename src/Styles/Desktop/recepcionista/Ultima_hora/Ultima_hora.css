@@ -127,12 +127,12 @@
   overflow: hidden;
   border-top: 1px solid #eee;
 }
-.Mesas .Seccion_mesas .Tarjeta .Reserva {
+.Mesas .Seccion_mesas .Tarjeta .Reserva_ultima {
   width: 80%;
   height: 15%;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 92, 0);
+  background: rgb(0, 35, 61);
   color: white;
   margin: auto;
   font-size: large;

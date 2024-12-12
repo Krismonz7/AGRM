@@ -5,7 +5,7 @@ import reci from '../../../assets/Iconos_perfil/recepcionista.png'
 export const Actualizado_r = () => {
   return (
     <div className="container">
-        <Volver />
+        <Volver ruta={"/admin/usuarios/admin_menu_r"}/>
 
         <div className="body">
 

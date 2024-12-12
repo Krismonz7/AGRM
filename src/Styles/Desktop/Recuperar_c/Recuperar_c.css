@@ -8,7 +8,7 @@
 
 /*Fente: font-family: "Inter", sans-serif;*/
 /*Variables usuario*/
-.Container {
+.container_recuperar {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,34 +17,8 @@
   width: 98vw;
   height: auto;
 }
-.Container .Header {
-  width: 90%;
-  height: 10vh;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: rgb(53, 53, 53);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.Container .Header .Volver {
-  width: 5%;
-  height: 85%;
-  color: white;
-  margin: auto 1%;
-  transition: transform 0.2s ease-out;
-  filter: invert(1);
-}
-.Container .Header .Volver img {
-  width: 100%;
-  height: 100%;
-}
-.Container .Header .Volver:hover {
-  /*hacer aniamcion aqui*/
-  transform: scale(1.2);
-}
-.Container .Form {
+.container_recuperar .Form {
+  border: 1px solid #eee;
   width: 50%;
   height: 90vh;
   display: flex;
@@ -55,25 +29,25 @@
   align-items: center;
   border: 1px solid #eee;
   color: white;
-  margin: 10vh auto;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   box-shadow: 10px 10px 10px 1px rgba(255, 255, 255, 0.278);
+  margin: 10vh auto;
 }
-.Container .Form label {
+.container_recuperar .Form label {
   width: 90%;
   height: 10vh;
   font-size: 25px;
 }
-.Container .Form input {
+.container_recuperar .Form input {
   width: 80%;
   height: 10vh;
   border-radius: 15px;
   border-style: none;
   font-size: 35px;
 }
-.Container .Form .Enviar {
+.container_recuperar .Form .Enviar {
   width: 50%;
   height: 10vh;
   display: flex;
@@ -87,16 +61,15 @@
   border-style: none;
   border-radius: 15px;
 }
-.Container .Imagen {
+.container_recuperar .imagen_recuperar {
   width: 35%;
   height: 70vh;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   margin: auto;
   filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(220deg);
 }
-.Container .Imagen img {
+.container_recuperar .imagen_recuperar img {
   width: 100%;
   height: 100%;
 }

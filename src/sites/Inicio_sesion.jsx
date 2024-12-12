@@ -1,5 +1,4 @@
-import logo from "../assets/logotipo.png"
-import flecha from '../assets/flecha.png'
+import logo from "../assets/logo.png"
 import '../Styles/Desktop/Inicio_sesion/Inicio_sesion.css'
 import { useNavigate } from "react-router-dom"
 import { Volver } from "../components/Volver"
@@ -7,26 +6,42 @@ import { useState } from "react"
 
 
 export const Inicio_sesion = () => {
+  const navigate = useNavigate();
 
   //Estados del coreo y contrasena:
   const [correo,setCorreo] = useState();
   const [contrasena,setContrasena] = useState();
 
-  const navigate = useNavigate();
 
   const goToProfile = (e) => {
     e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
     //Este if es para verificar las credenciales del admin
     if(correo == "jhontravolta" && contrasena == "123" ){
-      navigate("/admin/inicio_a"); // Navega relativo al perfil de admin
+      navigate("/admin/inicio_a"); // Navega al admin
     }
     //Este if es para el usuario normal
-    else if(correo == "dick" && contrasena == "122"){
-      navigate("/usuario/home_u"); // Navega al perfil de usuario
+    else if(correo == "dick" && contrasena == "123"){
+      navigate("/usuario/home_u"); // Navega al usuario
     }
-    
+    //Este if es para el recepcionista
+    else if(correo == "inoc" && contrasena == "123"){
+      navigate("/recepcionista/inicio_rc")
+    }
+    //Este if es para el gerente
+    else if(correo == "jeremy" && contrasena == "123"){
+      navigate("/gerente/inicio_g")
+    }
   };
+
+
+  const goToRegistrate = () =>{
+    navigate("/registro")
+  }
   
+  const goToRecuperar = () =>{
+    navigate("/recuperar_c")
+  }
   return (
     <div className = "inicio">
         <div className="header">
@@ -45,10 +60,13 @@ export const Inicio_sesion = () => {
           <p>Contraseña:</p>
           <input type="text" placeholder="Contrasena" onChange={(e) => setContrasena(e.target.value)}/>
 
-          <a href="" className="enlace">
+          <a href="" className="enlace" onClick={goToRegistrate}>
             Registrate 😋
           </a>
-          <button type="submit">
+          <a href="" className="enlace" onClick={goToRecuperar}>
+            Olvide mi contrasena 😱
+          </a>
+          <button type="submit" >
             Ingresar
           </button>
           
@@ -63,5 +81,4 @@ export const Inicio_sesion = () => {
 
     </div>
   )
-
 }

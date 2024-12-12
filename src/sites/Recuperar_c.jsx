@@ -1,26 +1,31 @@
 import guy from '../assets/Hombre_estrellado.png'
-import flecha from '../assets/flecha.png'
 import '../Styles/Desktop/Recuperar_c/Recuperar_c.css'
+import { useNavigate } from 'react-router-dom'
+import { Volver } from '../components/Volver'
+
+
 export const Recuperar_c = () => {
+
+    const navigate = useNavigate();
+    const goToExito = () =>{
+        navigate("/recuperar_c/recuperar_e")
+    }
   return (
-    <div className="Container">
-        <div className="Header">
-            <div className="Volver">
-                <img src={flecha} alt="" />
-            </div>
-        </div>
+    <div className="container_recuperar">
+        <Volver ruta={"/inicio_sesion"}/>
 
         <form action="" className="Form">
-            <label htmlFor="">Ingrese el correo de la cuenta
+            <label >Ingrese el correo de la cuenta
             de la cual desea recuperarla contraseña:</label>
             <input type="text" id='correo'/>
-            <button className="Enviar">
+            <button className="Enviar" onClick={goToExito}>
                 Enviar
             </button>
         </form>
-        <div className="Imagen">
+        <div className="imagen_recuperar">
             <img src={guy} alt="" />
         </div>
     </div>
   )
+
 }
